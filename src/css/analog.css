@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    left:50%;
+    bottom: 50%;
+    transform: translate(-50% ,50%);
+}
+
+.analog{
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    border-radius: 100%;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftoppng.com%2Fuploads%2Fpreview%2Fclock-face-without-hands-11549789960tkscwc7bpl.png&f=1&nofb=1&ipt=21adad61fb4ca61fd788b639ecaa094e347a863ae8ea0ed009a811aa1a398b36&ipo=images);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.second, .minute, .hour{
+    height: 45%;
+    width: 5px;
+    background-color: red;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    /* transform: rotate(10deg); */
+    
+}
+.minute{
+    height: 35%;
+    background-color: blue;
+}
+.hour{
+    height: 40%;
+    background-color: green;
+}

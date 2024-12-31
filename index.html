@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .analog, .digital{
+            height: 90vh;
+            width: 100%;
+            position: absolute;
+            display: none;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        button{
+            position: absolute;
+            padding: 10px;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="AlarmClock.html" frameborder="0" class="digital active"></iframe>
+    <iframe src="analog.html" frameborder="0" class="analog" ></iframe>
+    <button onclick="change()">change</button>
+    <script>
+        let dig = document.querySelector(".digital")
+        let alg = document.querySelector(".analog")
+     
+        function change(){
+            dig.classList.toggle("active")
+            alg.classList.toggle("active")
+            console.log(alg)
+            console.log(dig)
+        }
+    </script>
+</body>
+</html>
